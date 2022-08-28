@@ -10,10 +10,15 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.PORT || 3333, () => console.log("Server is live at port 3333"));
+function timeout(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+app.post('/dialogflow',async (request, response) => {
 
-app.post('/dialogflow',(request, response) => {
-   
+  await timeout(8000);
+  console.log("Hello");
     let text = "Your coffee price is 7$";
+
     
     // if (tag === 'Default Welcome Intent') {
     //   text = 'Hello from a GCF Webhook';
