@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.send('We are live')
 });
 
-app.listen(3333, () => console.log("Server is live at port 3333"));
+app.listen(process.env.PORT || 3333, () => console.log("Server is live at port 3333"));
 
 app.post('/dialogflow',(request, response) => {
    
