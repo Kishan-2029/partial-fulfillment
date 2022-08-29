@@ -15,7 +15,7 @@ function timeout(ms) {
 }
 app.post('/dialogflow',async (request, response) => {
 
-  await timeout(8000);
+  await timeout(4000);
   console.log("Hello");
     let text = "Your coffee price is 7$";
 
